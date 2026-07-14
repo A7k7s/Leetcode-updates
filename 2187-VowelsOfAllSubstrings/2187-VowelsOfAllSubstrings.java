@@ -1,0 +1,20 @@
+// Last updated: 7/14/2026, 2:01:06 PM
+class Solution {
+    
+    boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+    
+    public long countVowels(String word) {
+        long count = 0;
+        int len = word.length();
+        
+        for(int pos = 0; pos < len; pos++) {
+            if(isVowel(word.charAt(pos))) {
+                count += (long)(len - pos) * (long)(pos + 1);
+            }
+        }
+        
+        return count;
+    }
+}
