@@ -1,17 +1,17 @@
-# Last updated: 7/14/2026, 2:04:36 PM
-class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
-        if not nums:
-           return 0
-        k = sorted(set(nums))
-        longest = 1
-        current = 1
-        for i in range(1, len(k)):
-            if k[i] == k[i - 1] + 1:
-                current += 1
-            else:
-                longest = max(longest, current
-                )
-                current = 1
-        longest = max(longest, current)
-        return longest
+# Last updated: 8/24/2026, 4:04:12 PM
+1class Solution:
+2    def longestConsecutive(self, nums: List[int]) -> int:
+3        if not nums:
+4           return 0
+5        k = sorted(set(nums))
+6        longest = 1
+7        current = 1
+8        for i in range(1, len(k)):
+9            if k[i] == k[i - 1] + 1:
+10                current += 1
+11            else:
+12                longest = max(longest, current
+13                )
+14                current = 1
+15        longest = max(longest, current)
+16        return longest
